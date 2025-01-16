@@ -65,7 +65,7 @@ const AuthorsTable = () => {
   };
 
   return (
-    <div className="rounded-xl bg-white p-6 shadow-lg">
+    <div className="rounded-xl bg-white p-6 shadow-soft-xl">
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-xl font-bold text-gray-800">Authors Table</h2>
         <button
@@ -80,7 +80,7 @@ const AuthorsTable = () => {
             });
             setIsModalOpen(true);
           }}
-          className="flex items-center rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+          className="flex items-center rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-white shadow-soft-md hover:shadow-soft-lg"
         >
           <Plus className="mr-2 h-4 w-4" />
           Add Author
@@ -114,7 +114,7 @@ const AuthorsTable = () => {
                 <td className="whitespace-nowrap px-6 py-4">
                   <div className="flex items-center">
                     <img
-                      className="h-10 w-10 rounded-full"
+                      className="h-10 w-10 rounded-full shadow-soft-md"
                       src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
                         author.name
                       )}&background=random`}
@@ -165,7 +165,7 @@ const AuthorsTable = () => {
 
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="w-full max-w-md rounded-lg bg-white p-6">
+          <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-soft-xl">
             <h3 className="mb-4 text-lg font-bold">
               {editingAuthor?.id ? 'Edit Author' : 'Add Author'}
             </h3>
@@ -181,7 +181,7 @@ const AuthorsTable = () => {
                       name: e.target.value,
                     })
                   }
-                  className="w-full rounded-lg border p-2"
+                  className="w-full rounded-lg border p-2 shadow-soft-md"
                   required
                 />
               </div>
@@ -196,7 +196,7 @@ const AuthorsTable = () => {
                       email: e.target.value,
                     })
                   }
-                  className="w-full rounded-lg border p-2"
+                  className="w-full rounded-lg border p-2 shadow-soft-md"
                   required
                 />
               </div>
@@ -210,7 +210,7 @@ const AuthorsTable = () => {
                       role: e.target.value,
                     })
                   }
-                  className="w-full rounded-lg border p-2"
+                  className="w-full rounded-lg border p-2 shadow-soft-md"
                 >
                   <option>Admin</option>
                   <option>Author</option>
@@ -224,13 +224,13 @@ const AuthorsTable = () => {
                     setIsModalOpen(false);
                     setEditingAuthor(null);
                   }}
-                  className="rounded-lg border px-4 py-2 hover:bg-gray-50"
+                  className="rounded-lg border px-4 py-2 shadow-soft-md hover:bg-gray-50"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
+                  className="rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-white shadow-soft-md hover:shadow-soft-lg"
                 >
                   Save
                 </button>
