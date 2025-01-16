@@ -1,0 +1,77 @@
+$primary: #cb0c9f;
+$secondary: #8392ab;
+$info: #17c1e8;
+$success: #82d616;
+$warning: #fbcf33;
+$danger: #ea0606;
+$light: #e9ecef;
+$dark: #344767;
+
+$body-bg: #f8f9fa;
+$body-color: $dark;
+
+$font-family-sans-serif: "Open Sans", system-ui, -apple-system, sans-serif;
+$font-size-base: 1rem;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+
+$border-radius: .5rem;
+$border-radius-lg: 1rem;
+$box-shadow: 0 .25rem .375rem -.0625rem hsla(0,0%,8%,.12),0 .125rem .25rem -.0625rem hsla(0,0%,8%,.07);
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Custom styles
+.navbar-vertical {
+  box-shadow: $box-shadow;
+  .navbar-brand {
+    padding: 1rem;
+    font-weight: $font-weight-bold;
+  }
+  .nav-link {
+    padding: .675rem 1rem;
+    font-weight: $font-weight-normal;
+    color: $secondary;
+    &:hover {
+      color: $dark;
+    }
+    &.active {
+      background-color: rgba($primary, .1);
+      color: $primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.card {
+  box-shadow: $box-shadow;
+  border: 0;
+  .card-header {
+    background-color: transparent;
+    border-bottom: 0;
+    padding: 1.5rem;
+  }
+}
+
+.icon-shape {
+  width: 48px;
+  height: 48px;
+  background-position: center;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.icon-shape-primary {
+    background: linear-gradient(310deg, $primary, lighten($primary, 10%));
+  }
+  &.icon-shape-info {
+    background: linear-gradient(310deg, $info, lighten($info, 10%));
+  }
+  &.icon-shape-success {
+    background: linear-gradient(310deg, $success, lighten($success, 10%));
+  }
+  &.icon-shape-warning {
+    background: linear-gradient(310deg, $warning, lighten($warning, 10%));
+  }
+}

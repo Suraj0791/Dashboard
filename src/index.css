@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f8f9fa;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #67748e;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #252f40;
+}
+
+.nav-link.active {
+  color: #252f40;
+  font-weight: 600;
+}
